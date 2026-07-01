@@ -2,8 +2,9 @@
   "name": "smart-gitignore",
   "displayName": "Smart GitIgnore",
   "description": "Automatically scan workspace, detect technologies, and generate/update .gitignore files — supports Node, React, Next.js, Angular, Vue, Flutter, Python, Java, Go, Rust, .NET, Laravel, Docker",
-  "version": "1.0.0",
-  "publisher": "smart-gitignore",
+  "version": "1.0.1",
+  "icon": "icon.png",
+  "publisher": "smarter-gitignore",
   "author": {
     "name": "Smart GitIgnore"
   },
