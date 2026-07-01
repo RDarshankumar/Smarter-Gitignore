@@ -1,0 +1,154 @@
+{
+  "name": "smart-gitignore",
+  "displayName": "Smart GitIgnore",
+  "description": "Automatically scan workspace, detect technologies, and generate/update .gitignore files — supports Node, React, Next.js, Angular, Vue, Flutter, Python, Java, Go, Rust, .NET, Laravel, Docker",
+  "version": "1.0.0",
+  "publisher": "smart-gitignore",
+  "author": {
+    "name": "Smart GitIgnore"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/smart-gitignore/smart-gitignore#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smart-gitignore/smart-gitignore"
+  },
+  "bugs": {
+    "url": "https://github.com/smart-gitignore/smart-gitignore/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "gitignore",
+    "git",
+    "ignore",
+    "node",
+    "react",
+    "nextjs",
+    "angular",
+    "vue",
+    "flutter",
+    "python",
+    "java",
+    "go",
+    "rust",
+    "dotnet",
+    "docker",
+    "laravel",
+    "secrets",
+    "workspace",
+    "auto",
+    "generate"
+  ],
+  "galleryBanner": {
+    "color": "#1e1e2e",
+    "theme": "dark"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartGitIgnore.generate",
+        "title": "Generate .gitignore",
+        "category": "Smart GitIgnore"
+      },
+      {
+        "command": "smartGitIgnore.update",
+        "title": "Update .gitignore",
+        "category": "Smart GitIgnore"
+      },
+      {
+        "command": "smartGitIgnore.preview",
+        "title": "Preview Generated .gitignore",
+        "category": "Smart GitIgnore"
+      },
+      {
+        "command": "smartGitIgnore.removeDuplicates",
+        "title": "Remove Duplicate Entries",
+        "category": "Smart GitIgnore"
+      },
+      {
+        "command": "smartGitIgnore.analyze",
+        "title": "Analyze Workspace",
+        "category": "Smart GitIgnore"
+      }
+    ],
+    "configuration": {
+      "title": "Smart GitIgnore",
+      "properties": {
+        "smartGitIgnore.autoGenerate": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically generate .gitignore when workspace opens"
+        },
+        "smartGitIgnore.autoUpdate": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically update .gitignore when workspace opens"
+        },
+        "smartGitIgnore.detectSecrets": {
+          "type": "boolean",
+          "default": true,
+          "description": "Detect and ignore secret/credential files"
+        },
+        "smartGitIgnore.detectLargeFiles": {
+          "type": "boolean",
+          "default": true,
+          "description": "Detect and suggest ignoring large media files"
+        },
+        "smartGitIgnore.detectDatabaseFiles": {
+          "type": "boolean",
+          "default": true,
+          "description": "Detect and ignore local database files"
+        },
+        "smartGitIgnore.detectLogs": {
+          "type": "boolean",
+          "default": true,
+          "description": "Detect and ignore log files"
+        },
+        "smartGitIgnore.sortRules": {
+          "type": "boolean",
+          "default": true,
+          "description": "Sort rules alphabetically within each group"
+        },
+        "smartGitIgnore.groupRules": {
+          "type": "boolean",
+          "default": true,
+          "description": "Group rules by category with comments"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/test-electron": "^2.3.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.11",
+    "typescript": "^5.3.0"
+  }
+}
